@@ -22,7 +22,7 @@ public class EmployeeDao {
 		try {
 			//y not fileiInputStream is=new FileInputStream("prod-db.properties");
 			
-			InputStream is=this.getClass().getClassLoader().getResourceAsStream("dev-db.properties");
+			InputStream is=this.getClass().getClassLoader().getResourceAsStream("prod-db.properties");
 			Properties dbProps=new Properties();
 			dbProps.load(is);
 			String driverClassName=dbProps.getProperty("driverClassName");
